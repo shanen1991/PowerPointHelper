@@ -66,7 +66,7 @@ namespace PowerPointGenerator
 
 			allWords.AddRange(GetBoldedText(SearchText));
 
-			var queryString = imageSearchUrl.Replace("{{QUERY_STRING}}", HttpUtility.UrlEncode(string.Join(' ', allWords)));
+			var queryString = imageSearchUrl.Replace("{{QUERY_STRING}}", HttpUtility.UrlEncode(string.Join(" ", allWords)));
 			GetImages(queryString);
 		}
 
