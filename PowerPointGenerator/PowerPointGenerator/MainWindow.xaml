@@ -1,0 +1,28 @@
+﻿<Window x:Class="PowerPointGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PowerPointGenerator"
+        mc:Ignorable="d"
+        Title="Power Point Slide Helper" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="Title" HorizontalAlignment="Center" Margin="0,32,0,0" Text="Title" TextWrapping="Wrap" VerticalAlignment="Top" Width="298"/>
+        <RichTextBox x:Name="SearchText" Margin="21,66,441,80">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="body"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <ScrollViewer x:Name="Image_Scroller" Margin="400,66,50,80">
+            <StackPanel x:Name="Image_Panel">
+
+            </StackPanel>
+        </ScrollViewer>
+        <Button x:Name="Search" Content="Search" HorizontalAlignment="Left" Margin="183,376,0,0" VerticalAlignment="Top" Click="Search_Click"/>
+        <Button x:Name="Bold" Content="Bold" Margin="62,376,664,0" VerticalAlignment="Top" Click="Bold_Click" Height="20"></Button>
+        <Button x:Name="Select" Content="Select" HorizontalAlignment="Left" Margin="555,376,0,0" VerticalAlignment="Top" Click="Select_Click"/>
+
+    </Grid>
+</Window>
